@@ -1,0 +1,6 @@
+opencv-python
+pytesseract
+Pillow
+transformers
+torch
+openai-whisper
