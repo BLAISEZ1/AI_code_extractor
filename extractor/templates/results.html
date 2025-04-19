@@ -1,0 +1,16 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+
+<div class="container">
+    <h2>Code Extracted from: {{ video.title }}</h2>
+    {% for segment in segments %}
+      <div class="timestamp">
+        <strong>{{ segment.start_time }}s - {{ segment.end_time }}s</strong>
+      </div>
+      <div class="code-block">
+        <pre>{{ segment.code }}</pre>
+      </div>
+    {% empty %}
+      <p>No code found in this video.</p>
+    {% endfor %}
+</div>
